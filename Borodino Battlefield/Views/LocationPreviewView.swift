@@ -21,7 +21,7 @@ struct LocationPreviewView: View {
                 titleSetion
 
             }
-            VStack(spacing: 4) {
+            VStack(spacing: 15) {
                 
                 learnMoreButton
                 nextButton
@@ -58,7 +58,7 @@ extension LocationPreviewView {
                 Image(imageName)
                     .resizable()
                     .scaledToFill()
-                    .frame(width: 100, height: 100)
+                    .frame(width: 150, height: 100)
                     .cornerRadius(10)
             }
         }
@@ -90,9 +90,13 @@ extension LocationPreviewView {
         } label: {
             Text("Читать")
                 .font(.headline)
+                .foregroundColor(Color.white)
                 .frame(width: 125, height: 35)
         }
-        .buttonStyle(.borderedProminent)
+        .background(Color.black)
+        .buttonStyle(.bordered)
+        .cornerRadius(10)
+    
     
     }
     
@@ -103,8 +107,10 @@ extension LocationPreviewView {
         } label: {
             Text("Дальше")
                 .font(.headline)
+                .foregroundColor(Color.black)
                 .frame(width: 125, height: 35)
         }
+        
         .buttonStyle(.bordered)
     }
 }
