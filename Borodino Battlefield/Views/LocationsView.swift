@@ -40,19 +40,24 @@ extension LocationsView {
     private var header: some View {
         
         VStack {
-            Text(viewModel.mapLocation.name)
-                .font(.title2)
-                .fontWeight(.black)
-                .foregroundColor(.primary)
-                .frame(height: 55)
-                .frame(maxWidth: .infinity)
-                .background(Color.white)
-                .overlay(alignment: .leading) {
-                    Image(systemName: "arrow.down")
-                        .font(.headline)
-                        .foregroundColor(.primary)
-                        .padding()
-                }
+            
+            Button(action: viewModel.toggleLocationslist) {
+                Text(viewModel.mapLocation.name)
+                    .font(.title2)
+                    .fontWeight(.black)
+                    .foregroundColor(.primary)
+                    .frame(height: 55)
+                    .frame(maxWidth: .infinity)
+                    .animation(.none, value: viewModel.mapLocation)
+                    .background(Color.white)
+                    .overlay(alignment: .leading) {
+                        Image(systemName: "arrow.down")
+                            .font(.headline)
+                            .foregroundColor(.primary)
+                            .padding()
+                            .rotationEffect(Angle(degrees: viewModel.showLocationsList ? 180 : 0))
+                    }
+            }
             
             if viewModel.showLocationsList {
                 LocationsListView()

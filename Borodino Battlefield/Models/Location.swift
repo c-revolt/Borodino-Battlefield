@@ -8,8 +8,8 @@
 import SwiftUI
 import CoreLocation
 
-struct Location: Identifiable {
-    
+struct Location: Identifiable, Equatable {
+
     let name: String
     let category: String
     let imageNames: [String]
@@ -21,6 +21,11 @@ struct Location: Identifiable {
     // Identifiable
     var id: String {
         name + locationName
+    }
+    
+    // Уйгфефиду
+    static func == (lhs: Location, rhs: Location) -> Bool {
+        lhs.id == rhs.id
     }
     
 }

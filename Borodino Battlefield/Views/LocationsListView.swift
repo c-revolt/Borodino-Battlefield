@@ -15,9 +15,13 @@ struct LocationsListView: View {
          
         List {
             ForEach(viewModel.locations) { location in
-                listRowView(location: location)
-                    .padding(.vertical, 4)
-                    .listRowBackground(Color.clear)
+                Button {
+                    viewModel.showNextLocation(location: location)
+                } label: {
+                    listRowView(location: location)
+                }
+                .padding(.vertical, 4)
+                .listRowBackground(Color.clear)
             }
         }
         .listStyle(PlainListStyle())
