@@ -48,11 +48,16 @@ extension LocationsView {
                 .frame(maxWidth: .infinity)
                 .background(Color.white)
                 .overlay(alignment: .leading) {
-                    Image(systemName: "arrow.down ")
+                    Image(systemName: "arrow.down")
                         .font(.headline)
                         .foregroundColor(.primary)
                         .padding()
                 }
+            
+            if viewModel.showLocationsList {
+                LocationsListView()
+            }
+            
         }
         .background(.thickMaterial)
         .cornerRadius(10)
