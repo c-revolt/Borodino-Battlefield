@@ -18,11 +18,23 @@ struct LocationsView: View {
                 .ignoresSafeArea()
             
             VStack(spacing: 0) {
-                
                 header
                     .padding()
                 
                 Spacer()
+                
+                ZStack {
+                    
+                    ForEach(viewModel.locations) { location in
+                        if viewModel.mapLocation == location {
+                            LocationPreviewView(location: location)
+                               .shadow(color: Color.black.opacity(0.3), radius: 20)
+                               .padding()
+                               .transition(.asymmetric(insertion: .move(edge: .trailing), removal: .move(edge: .leading)))
+                        }
+                         
+                    }
+                }
             }
         }
     }
@@ -43,13 +55,15 @@ extension LocationsView {
             
             Button(action: viewModel.toggleLocationslist) {
                 Text(viewModel.mapLocation.name)
-                    .font(.title2)
+                    .font(.footnote)
                     .fontWeight(.black)
                     .foregroundColor(.primary)
                     .frame(height: 55)
+                    .frame(width: 250)
+                    .lineLimit(3)
                     .frame(maxWidth: .infinity)
                     .animation(.none, value: viewModel.mapLocation)
-                    .background(Color.white)
+                    .background(Color.clear)
                     .overlay(alignment: .leading) {
                         Image(systemName: "arrow.down")
                             .font(.headline)
@@ -64,7 +78,8 @@ extension LocationsView {
             }
             
         }
-        .background(.thickMaterial)
+        
+        .background(.ultraThinMaterial)
         .cornerRadius(10)
         .shadow(color: Color.black.opacity(0.3), radius: 20, x: 0, y: 15)
 
