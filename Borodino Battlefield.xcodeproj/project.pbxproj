@@ -18,6 +18,7 @@
 		D009EAF828D8745600A34B7E /* LocationsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D009EAF728D8745600A34B7E /* LocationsListView.swift */; };
 		D009EAFA28D8AEEC00A34B7E /* LocationPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D009EAF928D8AEEC00A34B7E /* LocationPreviewView.swift */; };
 		D009EAFC28D8CAFA00A34B7E /* LocationMapAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D009EAFB28D8CAF900A34B7E /* LocationMapAnnotationView.swift */; };
+		D0AC23D328DC441B00597DF5 /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AC23D228DC441B00597DF5 /* LocationDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		D009EAF728D8745600A34B7E /* LocationsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsListView.swift; sourceTree = "<group>"; };
 		D009EAF928D8AEEC00A34B7E /* LocationPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPreviewView.swift; sourceTree = "<group>"; };
 		D009EAFB28D8CAF900A34B7E /* LocationMapAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapAnnotationView.swift; sourceTree = "<group>"; };
+		D0AC23D228DC441B00597DF5 /* LocationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				D009EAF728D8745600A34B7E /* LocationsListView.swift */,
 				D009EAF928D8AEEC00A34B7E /* LocationPreviewView.swift */,
 				D009EAFB28D8CAF900A34B7E /* LocationMapAnnotationView.swift */,
+				D0AC23D228DC441B00597DF5 /* LocationDetailView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -200,6 +203,7 @@
 				D009EAF228D7911100A34B7E /* LocationDataService.swift in Sources */,
 				D009EAF428D798A100A34B7E /* LocationsView.swift in Sources */,
 				D009EAEE28D78C4E00A34B7E /* Location.swift in Sources */,
+				D0AC23D328DC441B00597DF5 /* LocationDetailView.swift in Sources */,
 				D009EADD28D7898000A34B7E /* Borodino_BattlefieldApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

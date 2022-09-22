@@ -15,6 +15,7 @@ struct Location: Identifiable, Equatable {
     let imageNames: [String]
     let locationName: String
     let description: String
+    let icon: String
     let link: String
     let coordinates: CLLocationCoordinate2D
     
