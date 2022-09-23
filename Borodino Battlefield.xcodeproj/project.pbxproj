@@ -19,6 +19,8 @@
 		D009EAFA28D8AEEC00A34B7E /* LocationPreviewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D009EAF928D8AEEC00A34B7E /* LocationPreviewView.swift */; };
 		D009EAFC28D8CAFA00A34B7E /* LocationMapAnnotationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D009EAFB28D8CAF900A34B7E /* LocationMapAnnotationView.swift */; };
 		D0AC23D328DC441B00597DF5 /* LocationDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AC23D228DC441B00597DF5 /* LocationDetailView.swift */; };
+		D0AC23D628DE21BA00597DF5 /* Landmark.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AC23D528DE21BA00597DF5 /* Landmark.swift */; };
+		D0AC23D828DE21EC00597DF5 /* ModelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0AC23D728DE21EC00597DF5 /* ModelData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,9 @@
 		D009EAF928D8AEEC00A34B7E /* LocationPreviewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationPreviewView.swift; sourceTree = "<group>"; };
 		D009EAFB28D8CAF900A34B7E /* LocationMapAnnotationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationMapAnnotationView.swift; sourceTree = "<group>"; };
 		D0AC23D228DC441B00597DF5 /* LocationDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationDetailView.swift; sourceTree = "<group>"; };
+		D0AC23D428DCAED500597DF5 /* Borodino-Battlefield-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Borodino-Battlefield-Info.plist"; sourceTree = SOURCE_ROOT; };
+		D0AC23D528DE21BA00597DF5 /* Landmark.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Landmark.swift; sourceTree = "<group>"; };
+		D0AC23D728DE21EC00597DF5 /* ModelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -68,6 +73,7 @@
 		D009EADB28D7898000A34B7E /* Borodino Battlefield */ = {
 			isa = PBXGroup;
 			children = (
+				D0AC23D428DCAED500597DF5 /* Borodino-Battlefield-Info.plist */,
 				D009EADC28D7898000A34B7E /* Borodino_BattlefieldApp.swift */,
 				D009EADE28D7898000A34B7E /* ContentView.swift */,
 				D009EAEF28D78DE800A34B7E /* DataServices */,
@@ -113,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				D009EAED28D78C4E00A34B7E /* Location.swift */,
+				D0AC23D528DE21BA00597DF5 /* Landmark.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -121,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				D009EAF128D7911100A34B7E /* LocationDataService.swift */,
+				D0AC23D728DE21EC00597DF5 /* ModelData.swift */,
 			);
 			path = DataServices;
 			sourceTree = "<group>";
@@ -196,9 +204,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				D009EADF28D7898000A34B7E /* ContentView.swift in Sources */,
+				D0AC23D628DE21BA00597DF5 /* Landmark.swift in Sources */,
 				D009EAFC28D8CAFA00A34B7E /* LocationMapAnnotationView.swift in Sources */,
 				D009EAF828D8745600A34B7E /* LocationsListView.swift in Sources */,
 				D009EAFA28D8AEEC00A34B7E /* LocationPreviewView.swift in Sources */,
+				D0AC23D828DE21EC00597DF5 /* ModelData.swift in Sources */,
 				D009EAF628D7A9D400A34B7E /* LocationsViewModel.swift in Sources */,
 				D009EAF228D7911100A34B7E /* LocationDataService.swift in Sources */,
 				D009EAF428D798A100A34B7E /* LocationsView.swift in Sources */,
@@ -336,11 +346,12 @@
 				DEVELOPMENT_TEAM = 2S52Q5VDX5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Borodino-Battlefield-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -350,7 +361,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -365,11 +376,12 @@
 				DEVELOPMENT_TEAM = 2S52Q5VDX5;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Borodino-Battlefield-Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
-				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = UIInterfaceOrientationPortrait;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -379,7 +391,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

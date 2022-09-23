@@ -56,7 +56,7 @@ extension LocationDetailView {
                     .clipped()
             }
         }
-        .frame(height: 500)
+        .frame(height: 350)
         .tabViewStyle(PageTabViewStyle())
     }
     
@@ -68,12 +68,13 @@ extension LocationDetailView {
             HStack(spacing: 16) {
                 Image(uiImage: UIImage(systemName: location.icon) ?? UIImage())
                     .resizable()
-                    .scaledToFit()
-                    .frame(width: 25, height: 25, alignment: .center)
-                    .foregroundColor(Color.red)
+                    .scaledToFill()
+                    .frame(width: 20, height: 20, alignment: .center)
+                    .foregroundColor(.green)
+                    
                 Text(location.locationName)
                     .font(.title3)
-                .foregroundColor(.secondary)
+                    .foregroundColor(.secondary)
             }
         }
         
@@ -87,7 +88,7 @@ extension LocationDetailView {
             
             if let url = URL(string: location.link) {
                 Link("Перейти к источнику", destination: url)
-                    .background(Color.gray)
+                    .foregroundColor(Color.blue)
             }
            
         }
@@ -97,7 +98,7 @@ extension LocationDetailView {
         
         Map(coordinateRegion: .constant(MKCoordinateRegion(
             center: location.coordinates,
-            span: viewModel.mapSpen)),
+            span: MKCoordinateSpan(latitudeDelta: 0.02, longitudeDelta: 0.022))),
             annotationItems: [location]) { location in
             MapAnnotation(coordinate: location.coordinates) {
                 LocationMapAnnotationView()
@@ -111,13 +112,13 @@ extension LocationDetailView {
     
     private var backButton: some View {
         Button {
-            
+            viewModel.sheetLocation = nil
         } label: {
             Image(systemName: "xmark")
                 .font(.headline)
                 .padding(16)
                 .foregroundColor(.primary)
-                .background(.thickMaterial)
+                .background(.ultraThinMaterial)
                 .cornerRadius(10)
                 .shadow(radius: 4)
                 .padding()
